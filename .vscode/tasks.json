@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "update_styles",
+			"type": "shell",
+			"command": "echo \"Adding media-link class to styles.css\""
+		}
+	]
+}

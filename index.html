@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Análisis académico profundo sobre ética profesional, bioética, responsabilidad tecnológica y ciudadanía global. Evidencia Módulo 3.">
+    <meta name="author" content="Estudiante de Ética Profesional">
+    <title>Ética y Ciudadanía Global | Evidencia Académica Módulo 3</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Ética<span class="accent">Pro</span></div>
+            <div class="nav-links">
+                <a href="#intro">Inicio</a>
+                <a href="#temas">Temas</a>
+                <a href="#conclusiones">Conclusiones</a>
+                <a href="#reflexion">Reflexión</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Dock -->
+    <div class="dock-container">
+        <div class="dock">
+            <a href="#intro" class="dock-icon" aria-label="Introducción" data-tooltip="Introducción">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <a href="#temas" class="dock-icon" aria-label="Temas Principales" data-tooltip="Temas">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.5 2H20V22H6.5A2.5 2.5 0 0 1 4 19.5V4.5A2.5 2.5 0 0 1 6.5 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 7H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M9 11H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <a href="#conclusiones" class="dock-icon" aria-label="Conclusiones" data-tooltip="Conclusiones">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 16V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <a href="#reflexion" class="dock-icon" aria-label="Reflexión Personal" data-tooltip="Reflexión">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 2V4M12 20V22M4 12H2M6.31412 6.31412L4.8999 4.8999M17.6859 6.31412L19.1001 4.8999M6.31412 17.69L4.8999 19.1042M17.6859 17.69L19.1001 19.1042M22 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <button id="themeToggle" class="dock-icon dock-icon-theme" aria-label="Cambiar tema" data-tooltip="Tema">
+                <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 2V4M12 20V22M4 12H2M6.31412 6.31412L4.8999 4.8999M17.6859 6.31412L19.1001 4.8999M6.31412 17.69L4.8999 19.1042M17.6859 17.69L19.1001 19.1042M22 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <a href="#" class="dock-icon dock-icon-top" aria-label="Volver arriba" data-tooltip="Inicio">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle with Animated Transition
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            html.classList.add('dark');
+        }
+        
+        themeToggle.addEventListener('click', async function(e) {
+            e.preventDefault();
+            
+            const isDark = html.classList.contains('dark');
+            const rect = themeToggle.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+            const maxRadius = Math.hypot(
+                Math.max(rect.left, window.innerWidth - rect.left),
+                Math.max(rect.top, window.innerHeight - rect.top)
+            );
+            
+            // Check if View Transition API is supported
+            if (document.startViewTransition) {
+                const transition = document.startViewTransition(() => {
+                    html.classList.toggle('dark');
+                    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+                });
+                
+                try {
+                    await transition.ready;
+                    document.documentElement.animate(
+                        {
+                            clipPath: [
+                                `circle(0px at ${x}px ${y}px)`,
+                                `circle(${maxRadius}px at ${x}px ${y}px)`
+                            ]
+                        },
+                        {
+                            duration: 400,
+                            easing: 'ease-in-out',
+                            pseudoElement: '::view-transition-new(root)'
+                        }
+                    );
+                } catch (e) {
+                    // Fallback if animation fails
+                }
+            } else {
+                // Fallback for browsers without View Transition API
+                html.classList.toggle('dark');
+                localStorage.setItem('theme', isDark ? 'light' : 'dark');
+            }
+        });
+    </script>
+
+    <header>
+        <div class="container">
+            <div class="header-label">Evidencia Académica | Módulo 3</div>
+            <h1>Ética Profesional y Ciudadanía Global</h1>
+            <p class="header-subtitle">Análisis crítico de cinco pilares fundamentales para la práctica profesional responsable en el siglo XXI</p>
+            <div class="header-meta">
+                <span class="meta-badge">📖 Trabajo Académico</span>
+                <span class="meta-badge">🎓 Nivel Universitario</span>
+                <span class="meta-badge">⏱️ Lectura: 15 min</span>
+            </div>
+            <a href="#intro" class="scroll-indicator">↓</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="intro-section" id="intro">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2>Introducción</h2>
+            </div>
+            <div class="intro-content">
+                <p class="intro-lead">La ética profesional no es un conjunto abstracto de normas, sino el fundamento práctico que define cómo tomamos decisiones en contextos complejos e inciertos.</p>
+                <p>Para esta evidencia he seleccionado cinco subtemas que considero <strong>fundamentales</strong> del Módulo 3, no por su relevancia teórica aislada, sino porque construyen un marco coherente para enfrentar los dilemas éticos contemporáneos en mi futuro profesional y en la sociedad globalizada actual.</p>
+                <div class="intro-grid">
+                    <div class="intro-card">
+                        <div class="card-icon">🧠</div>
+                        <h4>Enfoque Crítico</h4>
+                        <p>Análisis reflexivo sobre la aplicabilidad de los conceptos éticos</p>
+                    </div>
+                    <div class="intro-card">
+                        <div class="card-icon">🔗</div>
+                        <h4>Conexión Interdisciplinar</h4>
+                        <p>Integración de filosofía, bioética y responsabilidad social</p>
+                    </div>
+                    <div class="intro-card">
+                        <div class="card-icon">🌍</div>
+                        <h4>Perspectiva Global</h4>
+                        <p>Visión cosmopolita con impacto local y conciencia planetaria</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="blog-grid" id="temas">
+            <!-- Post 1 -->
+            <article class="blog-card">
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop" alt="Agente Moral - Persona reflexionando sobre decisiones éticas">
+                </div>
+                <div class="card-content">
+                    <div class="card-badge">Tema 1.2</div>
+                    <h2>La persona como agente moral</h2>
+                    
+                    <h3>Información clave</h3>
+                    <p>Ser "agente moral" significa que tenemos la capacidad de <strong>decidir conscientemente</strong> entre lo que está bien y lo que está mal. A diferencia de los animales que actúan por instinto, las personas podemos razonar nuestras acciones y asumir <em>responsabilidad</em> por sus consecuencias.</p>
+                    <div class="key-concepts">
+                        <h4>Conceptos fundamentales:</h4>
+                        <ul>
+                            <li><strong>Autonomía moral:</strong> Capacidad de autodeterminación</li>
+                            <li><strong>Deliberación ética:</strong> Proceso de razonamiento previo</li>
+                            <li><strong>Responsabilidad:</strong> Asumir las consecuencias de nuestros actos</li>
+                        </ul>
+                    </div>
+                    <p class="reference"><em>Referencia: Kant, I. (1785). Fundamentación de la metafísica de las costumbres.</em></p>
+
+                    <div class="example-box">
+                        <h3>Ejemplo real</h3>
+                        <p>Cuando veo que alguien hace trampa en un examen y tengo que decidir si lo reporto o no.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="blog-card">
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop" alt="Bienes Internos - Equipo profesional trabajando con excelencia">
+                </div>
+                <div class="card-content">
+                    <div class="card-badge">Tema 4.2</div>
+                    <h2>Bienes internos y controversias</h2>
+                    
+                    <h3>Información clave</h3>
+                    <p>Los <strong>bienes internos</strong> son las satisfacciones intrínsecas de hacer bien nuestro trabajo (excelencia, ayuda genuina, crecimiento profesional). Los <strong>bienes externos</strong> son recompensas extrínsecas como el salario o reconocimiento social. Los problemas éticos surgen cuando priorizamos sistemáticamente los externos sobre los internos.</p>
+                    <div class="key-concepts">
+                        <h4>El caso Challenger (1986):</h4>
+                        <p>Los ingenieros de Morton Thiokol advirtieron sobre fallos en las juntas O-ring a bajas temperaturas. La presión de cumplir plazos (bien externo) superó la prioridad de seguridad (bien interno), resultando en la muerte de 7 astronautas.</p>
+                        <p><strong>Lección:</strong> Las organizaciones deben crear culturas donde el bien interno (seguridad, calidad) no sea negociable.</p>
+                    </div>
+                    <p class="reference"><em>Referencia: MacIntyre, A. (1981). After Virtue: A Study in Moral Theory.</em></p>
+
+                    <div class="example-box">
+                        <h3>Ejemplo real</h3>
+                        <p>Un profesor que pone exámenes fáciles solo para ser popular (bien externo) vs enseñar bien (bien interno).</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="blog-card">
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop" alt="Bioética - Profesional médico con responsabilidad ética">
+                </div>
+                <div class="card-content">
+                    <div class="card-badge">Tema 6.1</div>
+                    <h2>Principios de la bioética</h2>
+                    
+                    <h3>Información clave</h3>
+                    <p>Los cuatro principios bioéticos de <strong>Beauchamp y Childress</strong> (1979) son una brújula para navegar dilemas complejos en cualquier profesión:</p>
+                    <div class="key-concepts">
+                        <h4>Los 4 Principios:</h4>
+                        <ol>
+                            <li><strong>No Maleficencia:</strong> "Primum non nocere" - Primero, no hacer daño</li>
+                            <li><strong>Beneficencia:</strong> Promover activamente el bienestar del otro</li>
+                            <li><strong>Autonomía:</strong> Respetar la capacidad de decisión informada</li>
+                            <li><strong>Justicia:</strong> Distribución equitativa de recursos y responsabilidades</li>
+                        </ol>
+                        <p class="highlight">💡 Estos principios entran frecuentemente en <strong>conflicto</strong>, requiriendo una ponderación contextual.</p>
+                    </div>
+                    <p class="reference"><em>Referencia: Beauchamp, T. L., & Childress, J. F. (2019). Principles of Biomedical Ethics (8th ed.).</em></p>
+
+                    <div class="example-box">
+                        <h3>Ejemplo real</h3>
+                        <p>¿Reportar a un compañero que no trabaja (Justicia) o cubrirlo para no dañarlo (No maleficencia)?</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 4 -->
+            <article class="blog-card">
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop" alt="Responsabilidad Tecnológica - Concepto de tecnología y responsabilidad futura">
+                </div>
+                <div class="card-content">
+                    <div class="card-badge">Tema 6.2</div>
+                    <h2>Responsabilidad y precaución</h2>
+                    
+                    <h3>Información clave</h3>
+                    <p><strong>Hans Jonas</strong> (1979) reformula el imperativo categórico para la era tecnológica: <em>"Obra de tal manera que los efectos de tu acción sean compatibles con la permanencia de una vida humana auténtica en la Tierra"</em>.</p>
+                    <div class="key-concepts">
+                        <h4>Principio de Responsabilidad:</h4>
+                        <ul>
+                            <li><strong>Heurística del temor:</strong> Dar más peso a las profecías negativas que a las positivas</li>
+                            <li><strong>Principio de precaución:</strong> Actuar preventivamente ante riesgos graves e irreversibles</li>
+                            <li><strong>Asimetría temporal:</strong> Responsabilidad hacia generaciones futuras que no pueden defenderse</li>
+                        </ul>
+                        <p class="case-study"><strong>Caso contemporáneo:</strong> La IA y redes sociales han demostrado impactos negativos (adicción, polarización, desinformación) que Jonas anticipó: tecnología sin responsabilidad ética previa.</p>
+                    </div>
+                    <p class="reference"><em>Referencia: Jonas, H. (1995). El principio de responsabilidad: Ensayo de una ética para la civilización tecnológica.</em></p>
+
+                    <div class="example-box">
+                        <h3>Ejemplo real</h3>
+                        <p>Proteger datos de usuarios en una app por precaución, aunque la ley no lo exija todavía.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 5 -->
+            <article class="blog-card">
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&h=600&fit=crop" alt="Ciudadanía Global - Conexión global y diversidad cultural">
+                </div>
+                <div class="card-content">
+                    <div class="card-badge">Tema 12.3</div>
+                    <h2>Ciudadanía global siglo XXI</h2>
+                    
+                    <h3>Información clave</h3>
+                    <p>La <strong>ciudadanía global</strong> trasciende las fronteras nacionales para reconocer nuestra pertenencia a una comunidad mundial interconectada. Implica tres dimensiones:</p>
+                    <div class="key-concepts">
+                        <h4>Dimensiones de la Ciudadanía Global:</h4>
+                        <ol>
+                            <li><strong>Cognitiva:</strong> Conocimiento crítico sobre sistemas globales (economía, medio ambiente, derechos humanos)</li>
+                            <li><strong>Socioemocional:</strong> Empatía, solidaridad y respeto por la diversidad cultural</li>
+                            <li><strong>Conductual:</strong> Acción responsable local con conciencia de impacto global</li>
+                        </ol>
+                        <p class="highlight">🌍 "Piensa globalmente, actúa localmente" - El consumo ético, activismo digital y voluntariado son expresiones contemporáneas.</p>
+                    </div>
+                    <p class="reference"><em>Referencia: UNESCO (2015). Global Citizenship Education: Topics and Learning Objectives.</em></p>
+
+                    <div class="example-box">
+                        <h3>Ejemplo real</h3>
+                        <p>Cuestionar si mi ropa barata apoya la explotación laboral en otros países.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <section class="conclusion-section" id="conclusiones">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2>Síntesis y Conclusiones</h2>
+            </div>
+            <p class="section-intro">Estos cinco subtemas no fueron seleccionados arbitrariamente: constituyen una <strong>arquitectura conceptual progresiva</strong> que va desde la reflexión individual hasta la responsabilidad planetaria.</p>
+            <ul>
+                <li><strong>Progresión lógica:</strong> Empiezan con lo personal (ser agente moral), pasan a lo profesional (bienes internos, principios éticos), y terminan en lo global (ciudadanía mundial).</li>
+                <li><strong>Utilidad práctica:</strong> Como futuro profesional, necesito herramientas para resolver dilemas éticos reales. Los principios y el concepto de bienes internos son esas herramientas.</li>
+                <li><strong>Relevancia actual:</strong> Temas como la responsabilidad tecnológica y la ciudadanía global son discusiones vivas en el mundo de hoy.</li>
+                <li><strong>Pensamiento crítico:</strong> Me ayudan a no solo memorizar, sino a analizar situaciones desde varios ángulos para tomar mejores decisiones.</li>
+            </ul>
+            <p>Estos temas me han ayudado a ver que la ética no es solo para filósofos, sino una guía esencial para mi vida diaria y mi futuro trabajo.</p>
+        </section>
+
+        <section class="reflection-section" id="reflexion">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2>Reflexión Personal y Compromiso Ético</h2>
+            </div>
+            <p>El impacto de esta asignatura en mi formación ha sido profundo. He aprendido que la ética no es un conjunto de reglas abstractas, sino una herramienta práctica para la toma de decisiones en mi vida diaria y profesional. Entender conceptos como la responsabilidad, la precaución y la ciudadanía global me permite ver mi carrera no solo como un medio de sustento, sino como una oportunidad para contribuir positivamente a la sociedad.</p>
+            <p>Me comprometo a actuar como un agente moral consciente, priorizando los bienes internos de mi profesión y aplicando los principios éticos para construir un entorno más justo y humano. Esta asignatura me ha dado la base para ser no solo un buen profesional, sino un ciudadano comprometido con el bienestar de mi comunidad y del mundo.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Evidencia Académica</h3>
+                <p>Trabajo realizado como parte del Módulo 3: Ética Profesional y Ciudadanía Global</p>
+            </div>
+            <div class="footer-section">
+                <h3>Referencias Principales</h3>
+                <ul class="footer-refs">
+                    <li>Kant, I. (1785). Fundamentación de la metafísica de las costumbres</li>
+                    <li>Jonas, H. (1995). El principio de responsabilidad</li>
+                    <li>Beauchamp & Childress (2019). Principles of Biomedical Ethics</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Metodología</h3>
+                <p>Análisis crítico-reflexivo con enfoque en aplicación práctica y casos contemporáneos</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 | Trabajo Académico | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+</body>
+</html>
